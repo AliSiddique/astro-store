@@ -1,14 +1,19 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Hero from "../components/landing/Hero.astro";
-import Description from "../components/landing/Description.astro";
-import Screenshots from "../components/landing/Screenshots.astro";
-import Faq from "../components/landing/Faq.astro";
+import { getCollection } from "astro:content";
+const allPosts = await getCollection("posts");
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Hero from "@/components/landing/Hero.astro";
+import Latest from "@/components/store/Latest.astro";
+import Icons from "@/components/store/Icons.astro";
+import Wallpapers from "@/components/store/Wallpapers.astro";
+import Sales from "@/components/cta/Sales.astro";
+import LatestEntries from "@/components/entries/LatestEntries.astro";
+import Newsletter from "@/components/cta/Newsletter.astro";
 import { AstroSeo } from "@astrolib/seo";
 ---
 
 <AstroSeo
-  title="About Michael Andreuzza"
+  title="Title"
   description="Your site description goes here"
   canonical="https://www.lexingtonthemes.com"
   openGraph={{
@@ -43,5 +48,34 @@ import { AstroSeo } from "@astrolib/seo";
 />
 <BaseLayout>
   <Hero />
-  
+  <Latest />
+  <Sales />
+  <Icons />
+  <Wallpapers />
+  <section>
+    <div class="items-center px-8 py-12 mx-auto max-w-7xl md:px-12 lg:py-24">
+      <div class="border-b border-gray-200 pb-5">
+        <h3 class="text-base font-semibold text-black">From our blog</h3>
+      </div>
+      <ul
+        class="grid md:grid-cols-2 lg:grid-cols-2 mt-12 gap-8 gap-y-12 lg:gap-y-24">
+        {
+          allPosts
+            .slice(0, 2)
+            .map((post) => (
+              <LatestEntries
+                url={"/posts/" + post.slug}
+                title={post.data.title}
+                description={post.data.description}
+                alt={post.data.title}
+                pubDate={post.data.pubDate.toString().slice(0, 10)}
+                author={post.data.author}
+                image={post.data.image.url}
+              />
+            ))
+        }
+      </ul>
+    </div>
+  </section>
+  <Newsletter />
 </BaseLayout>

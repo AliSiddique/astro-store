@@ -4,34 +4,44 @@ const { title, url, description, pubDate, author, image } = Astro.props;
 
 <li>
   <a href={url} title={title} class="group">
-    <article class="flex-1 h-full flex flex-col">
-      <div class="block w-full lg:col-span-2">
+    <article>
+      <div
+        class="relative isolate flex flex-col justify-end rounded-xl overflow-hidden pt-80 sm:pt-48 lg:pt-80">
         <img
-          class="aspect-[384/246] object-cover bg-center h-full"
           src={image}
           alt={title}
+          class="absolute inset-0 -z-10 h-full w-full object-cover"
         />
+
+        <div class="bg-white/10 backdrop-blur-2xl border-t border-white/50 p-6">
+          <div
+            class="flex flex-wrap font-semibold justify-between overflow-hidden text-sm leading-6 text-white">
+            <h3 class="font-semibold text-white uppercase">
+              By {author}
+            </h3>
+            <time datetime={pubDate} class="mr-8">{pubDate}</time>
+          </div>
+        </div>
       </div>
-      <div class="flex flex-col items-start justify-between flex-1 w-full mt-4">
+      <div
+        class="flex flex-col bg-white/50 items-start justify-between flex-1 w-full pt-4 px-2">
         <div class="w-full">
           <div>
-            <p class="font-medium text-black">{title}</p>
+            <p class="text-base font-semibold text-black uppercase">
+              {title}
+            </p>
           </div>
-          <p class="mt-2 text-sm text-slate-600 line-clamp-3 font-serif">
+          <p class="mt-2 text-gray-600 line-clamp-2">
             {description}
           </p>
-        </div>
-        <footer>
-          <div class="inline-flex space-x-1 items-center mt-6">
-            <p class="text-xs font-medium text-gray-900">
-              {author}
-            </p>
-            <span aria-hidden="true">&middot;</span>
-            <div class="flex text-xs text-gray-500">
-              <time datetime="2020-03-16"> {pubDate}</time>
-            </div>
+          <div class="mt-4">
+            <a
+              href={url}
+              class="items-center text-sm active:bg-gray-100 active:text-gray-900/60 active:transition-none font-medium gap-2 inline-flex justify-center outline-offset-2 transition w-full text-black lg:w-auto"
+              >Read more &nbsp; &rarr;
+            </a>
           </div>
-        </footer>
+        </div>
       </div>
     </article>
   </a>

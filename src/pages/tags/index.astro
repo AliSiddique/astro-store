@@ -13,22 +13,21 @@ const pageTitle = "Tag Index";
         <li>
           <ol
             role="list"
-            class="mt-8 divide-y divide-slate-300/30 rounded-2xl bg-slate-50 py-3 px-6 text-base tracking-tight sm:py-7 sm:px-8">
-              {
-                tags.map((tag) => (
-            <li
-              class="flex justify-between py-3"
-              aria-label="Strokes and fills on page 21">
-                  <span class="font-medium text-slate-900">
+            class="mt-8 divide-y divide-gray-300/30 rounded-2xl bg-gray-50 py-3 px-6 text-base tracking-tight sm:py-7 sm:px-8">
+            {
+              tags.map((tag) => (
+                <li
+                  class="flex justify-between py-3"
+                  aria-label="Strokes and fills on page 21">
+                  <span class="font-medium text-gray-900">
                     <a href={`/tags/${tag}`}>{tag}</a>
                   </span>
-                  </li>
-                  ))
-                }
+                </li>
+              ))
+            }
           </ol>
         </li>
       </ol>
     </div>
   </section>
-  
 </BaseLayout>

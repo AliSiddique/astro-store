@@ -1,0 +1,139 @@
+<section>
+  <div
+    class="items-center px-8 pb-12 mx-auto max-w-7xl md:px-12 lg:pb-24 pt-36">
+    <div
+      class="lg:gap-x-8 lg:gap-y-10 lg:grid lg:grid-cols-7 lg:grid-rows-1 xl:gap-x-16">
+      <div
+        class="mx-auto lg:col-span-3 lg:max-w-none lg:mt-0 lg:row-end-2 lg:row-span-2 max-w-2xl mt-14 sm:mt-16">
+        <h1
+          class="text-3xl md:text-5xl tracking-tighter font-medium text-black">
+          IPHONE 14 PRO MAX
+        </h1>
+        <p class="text-gray-600 mt-4">
+          According to history textbooks, the technique behind forging Damascus
+          Steel has been lost to time. Lucky for you, we don't read history
+          textbooks. Turns out, recreating Damascus Steel is exceedingly simple.
+          You take a Damascus pattern, run it through a $99,000 printer, and
+          boom: you've got Damascus. It's kind of like baking a cake, except the
+          flour costs more than your college tuition.
+        </p>
+        <div class="mt-10 gap-2 grid grid-cols-1 sm:grid-cols-2">
+          <a
+            href="#"
+            class="items-center text-sm active:bg-gray-100 active:text-black/60 active:transition-none border font-medium gap-2 inline-flex justify-center outline-offset-2 px-6 py-3 transition w-full lg:w-auto rounded-lg bg-black border-white/20 hover:bg-gray-600 text-white"
+            >Buy now
+          </a><a
+            href="/system/overview"
+            class="items-center text-sm active:bg-gray-100 active:text-black/60 active:transition-none border font-medium gap-2 inline-flex justify-center outline-offset-2 px-6 py-3 transition w-full bg-white hover:bg-gray-50 text-black lg:w-auto rounded-lg"
+            >See all pages
+          </a>
+        </div>
+        <div
+          x-data="{
+        activeAccordion: '',
+        setActiveAccordion(id) {
+            this.activeAccordion = (this.activeAccordion == id) ? '' : id
+        }
+    }"
+          class="relative w-full mx-auto text-sm font-normal border-t mt-10 pt-10 space-y-4">
+          <div
+            x-data="{ id: $id('accordion') }"
+            :class="{ 'text-gray-600': activeAccordion==id, 'text-black hover:text-black': activeAccordion!=id }"
+            class="cursor-pointer group">
+            <button
+              @click="setActiveAccordion(id)"
+              class="flex items-center justify-between w-full y-4 pb-1 text-left select-none">
+              <span class="text-base font-semibold">Highlights</span>
+              <svg
+                class="w-5 h-5 duration-300 ease-out"
+                :class="{ '-rotate-[45deg]': activeAccordion==id }"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 6v12m6-6H6"></path></svg
+              >
+            </button>
+            <div x-show="activeAccordion==id" x-collapse x-cloak>
+              <div class="py4 pt-2 text-gray-600 text-sm">
+                <ul role="list" class="list-disc list-inside">
+                  <li>200+ Mockups in 3 unique styles</li><li>
+                    Compatible with Figma, Sketch, and Adobe XD
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div
+            x-data="{ id: $id('accordion') }"
+            :class="{ 'text-gray-600': activeAccordion==id, 'text-black hover:text-black': activeAccordion!=id }"
+            class="cursor-pointer group">
+            <button
+              @click="setActiveAccordion(id)"
+              class="flex items-center justify-between w-full y-4 pb-1 text-left select-none">
+              <span class="text-base font-semibold">License</span>
+              <svg
+                class="w-5 h-5 duration-300 ease-out"
+                :class="{ '-rotate-[45deg]': activeAccordion==id }"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 6v12m6-6H6"></path></svg
+              >
+            </button>
+            <div x-show="activeAccordion==id" x-collapse x-cloak>
+              <div class="y-4 pt-2 text-gray-600 text-sm">
+                This license states that you are allowed to use these icons for
+                your own personal and professional purposes, but you cannot sell
+                or give them away to others in their original or altered form.
+                It is important to read the entire license agreement for further
+                details.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lg:col-span-4 lg:row-end-1 mt-12 lg:mt-0 space-y-3">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="aspect-h-3 aspect-w-4 overflow-hidden">
+            <img
+              alt="#"
+              class="object-center object-cover rounded-xl"
+              src="https://images.unsplash.com/photo-1510878933023-e2e2e3942fb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80"
+            />
+          </div>
+          <div class="hidden aspect-h-3 aspect-w-4 lg:block overflow-hidden">
+            <img
+              alt="#"
+              class="object-center object-cover rounded-xl"
+              src="https://images.unsplash.com/photo-1550029402-226115b7c579?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1065&q=80"
+            />
+          </div>
+          <div class="aspect-h-3 aspect-w-4 overflow-hidden">
+            <img
+              alt="#"
+              class="object-center object-cover rounded-xl"
+              src="https://images.unsplash.com/photo-1616353071588-708dcff912e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            />
+          </div>
+          <div class="hidden aspect-h-3 aspect-w-4 lg:block overflow-hidden">
+            <img
+              alt="#"
+              class="object-center object-cover rounded-xl"
+              src="https://images.unsplash.com/photo-1617220932938-9692db97ace6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

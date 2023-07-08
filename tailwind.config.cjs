@@ -2,8 +2,8 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
 module.exports = {
-	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-	theme: {
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  theme: {
     fontSize: {
       xs: [
         "0.75rem",
@@ -89,32 +89,30 @@ module.exports = {
         screens: "url('/path-to/image.png')",
       }),
       colors: {
-        black: "#131115",
-      
-        accent: {
-            "50": "#EBEBFF",
-      "100": "#D2D2FE",
-      "200": "#A6A4FE",
-      "300": "#7E7CFD",
-      "400": "#524FFD",
-      "500": "#2522FC",
-      "600": "#0703E2",
-      "700": "#0502AB",
-      "800": "#03026F",
-      "900": "#020137"
-        },
+        black: "#161616",
+        "blue": {
+      50: "#EBF0FF",
+      100: "#D6E2FF",
+      200: "#ADC5FF",
+      300: "#85A7FF",
+      400: "#5C8AFF",
+      500: "#366EFF",
+      600: "#0045F5",
+      700: "#0034B8",
+      800: "#00237A",
+      900: "#00113D",
+      950: "#00091F"
+    },
       },
       fontFamily: {
-
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
-        mono: ["JetBrains Mono", ...defaultTheme.fontFamily.mono],
       },
     },
   },
-	plugins: [
-		 require('@tailwindcss/typography'),
+  plugins: [
+    require('@tailwindcss/typography'),
     require('@tailwindcss/forms'),
     require('@tailwindcss/line-clamp'),
-		require('@tailwindcss/aspect-ratio'),
-	],
+    require('@tailwindcss/aspect-ratio'),
+  ],
 }

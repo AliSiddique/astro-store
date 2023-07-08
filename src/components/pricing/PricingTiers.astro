@@ -1,0 +1,477 @@
+<section x-data="{annual: false}">
+  <div
+    class="items-center px-8 pb-12 mx-auto max-w-7xl md:px-12 lg:pb-24 pt-36">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-3xl md:text-5xl tracking-tighter font-medium text-black">
+        Become a member today <span class="md:block text-gray-500"
+          >and unlock unlimited access.</span
+        >
+      </p>
+      <p class="mt-4 text-lg text-gray-600 max-w-xl mx-auto">
+        Enroll in our membership program today at a discounted rate and enjoy
+        full access to our incredible lineup of products.
+      </p>
+      <div class="max-w-sm mx-auto">
+        <div
+          class="overflow-hidden inline-flex mt-6 z-0 border rounded-lg p-0.5 w-full">
+          <button
+            class="text-xs text-black w-full block font-medium px-8 py-2 transition rounded-lg border border-transparent"
+            @click="annual = false"
+            :class="annual == false ? 'bg-gray-100 border text-black ' : ''"
+            type="button">Monthly</button
+          >
+          <button
+            class="text-xs text-black w-full block font-medium px-8 py-2 transition rounded-lg border border-transparent"
+            @click="annual = true"
+            :class="annual == true ? 'bg-gray-100 border text-black' : ''"
+            type="button">Annual ( save 25% )</button
+          >
+        </div>
+      </div>
+    </div>
+    <div class="mt-12 lg:mt-24 flow-root">
+      <div
+        class="isolate grid max-w-sm grid-cols-1 gap-y-16 gap-x-12 sm:mx-auto lg:mt-0 lg:max-w-none lg:grid-cols-3">
+        <div class="pt-16 lg:pt-0 grid">
+          <div class="border p-6 rounded-xl bg-gray-50 h-full">
+            <h3 id="tier-essential" class="text-base font-semibold text-black">
+              Pro Bundle
+            </h3>
+            <p class="mt-6 flex order-first items-baseline gap-x-1">
+              <span
+                x-text="annual ? '$99' : '$199'"
+                class="text-4xl tracking-tighter font-medium text-black"></span>
+              <span
+                x-text="annual ? '/yearly' : '/month'"
+                class="text-sm font-semibold leading-6 text-gray-600"></span>
+            </p>
+            <a
+              href="#"
+              class="mt-4 items-center text-sm active:bg-gray-100 active:text-gray-900/60 active:transition-none border font-medium gap-2 inline-flex justify-between outline-offset-2 px-6 py-3 transition w-full rounded-lg bg-black border-white/20 hover:bg-gray-600 text-white"
+              >Buy bundle <span>&rarr;</span></a
+            >
+          </div>
+          <p class="mt-4 text-sm font-semibold leading-6 text-black">
+            The perfect package to get you started as a newbie from today.
+          </p>
+          <ul role="list" class="mt-6 text-sm leading-6 text-gray-600 divide-y">
+            <li class="inline-flex items-start gap-3 py-4">
+              <svg
+                class="w-5 h-4 shrink-0"
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-check"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M5 12l5 5l10 -10"></path>
+              </svg>All features of the Starter Bundle
+            </li>
+            <li class="inline-flex items-start gap-3 py-4">
+              <svg
+                class="w-5 h-4 shrink-0"
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-check"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M5 12l5 5l10 -10"></path>
+              </svg>Premium wallpapers with exclusive designs
+            </li>
+            <li class="inline-flex items-start gap-3 py-4">
+              <svg
+                class="w-5 h-4 shrink-0"
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-check"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M5 12l5 5l10 -10"></path>
+              </svg>
+              Advanced templates for professional design projects
+            </li>
+            <li class="inline-flex items-start gap-3 py-4">
+              <svg
+                class="w-5 h-4 shrink-0"
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-check"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M5 12l5 5l10 -10"></path>
+              </svg>
+              Premium phone cases with additional customization options
+            </li>
+          </ul>
+        </div>
+        <div class="pt-16 lg:pt-0 grid">
+          <div class="border p-6 rounded-xl bg-gray-50 h-full">
+            <h3 class="text-base font-semibold text-black">Pro Bundle</h3>
+            <p class="mt-6 flex order-first items-baseline gap-x-1">
+              <span
+                x-text="annual ? '$199' : '$299'"
+                class="text-4xl tracking-tighter font-medium text-black"></span>
+              <span
+                x-text="annual ? '/yearly' : '/month'"
+                class="text-sm font-semibold leading-6 text-gray-600"></span>
+            </p>
+            <a
+              href="#"
+              class="mt-4 items-center text-sm active:bg-gray-100 active:text-gray-900/60 active:transition-none border font-medium gap-2 inline-flex justify-between outline-offset-2 px-6 py-3 transition w-full rounded-lg bg-black border-white/20 hover:bg-gray-600 text-white"
+              >Buy bundle <span>&rarr;</span></a
+            >
+          </div>
+          <p class="mt-4 text-sm font-semibold leading-6 text-black">
+            Unlock advanced features and maximize your productivity.
+          </p>
+          <ul role="list" class="mt-6 text-sm leading-6 text-gray-600 divide-y">
+            <li class="inline-flex items-start gap-3 py-4">
+              <svg
+                class="w-5 h-4 shrink-0"
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-check"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M5 12l5 5l10 -10"></path>
+              </svg>All features of the Starter Bundle
+            </li>
+            <li class="inline-flex items-start gap-3 py-4">
+              <svg
+                class="w-5 h-4 shrink-0"
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-check"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M5 12l5 5l10 -10"></path>
+              </svg>Premium wallpapers with exclusive designs
+            </li>
+            <li class="inline-flex items-start gap-3 py-4">
+              <svg
+                class="w-5 h-4 shrink-0"
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-check"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M5 12l5 5l10 -10"></path>
+              </svg>
+              Advanced templates for professional design projects
+            </li>
+            <li class="inline-flex items-start gap-3 py-4">
+              <svg
+                class="w-5 h-4 shrink-0"
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-check"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M5 12l5 5l10 -10"></path>
+              </svg>
+              Premium phone cases with additional customization options
+            </li>
+          </ul>
+        </div>
+        <div class="pt-16 lg:pt-0 grid">
+          <div class="border p-6 rounded-xl bg-black h-full">
+            <h3 class="text-base font-semibold text-white">Premium Bundle</h3>
+            <p class="mt-6 flex order-first items-baseline gap-x-1">
+              <span
+                x-text="annual ? '$299' : '$399'"
+                class="text-4xl tracking-tighter font-medium text-white"></span>
+              <span
+                x-text="annual ? '/yearly' : '/month'"
+                class="text-sm font-semibold leading-6 text-gray-300"></span>
+            </p>
+            <a
+              href="#"
+              class="mt-4 items-center text-sm active:bg-gray-100 active:text-gray-300/60 active:transition-none border font-medium gap-2 inline-flex justify-between outline-offset-2 px-6 py-3 transition w-full rounded-lg bg-white border-black/20 hover:bg-gray-100 text-black"
+              >Buy bundle <span>&rarr;</span></a
+            >
+          </div>
+          <p class="mt-4 text-sm font-semibold leading-6 text-black">
+            The ultimate bundle for professionals and power users.
+          </p>
+          <ul role="list" class="mt-6 text-sm leading-6 text-gray-600 divide-y">
+            <li class="inline-flex items-start gap-3 py-4">
+              <svg
+                class="w-5 h-4 shrink-0"
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-check"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M5 12l5 5l10 -10"></path>
+              </svg>All features of the Pro Bundle
+            </li>
+            <li class="inline-flex items-start gap-3 py-4">
+              <svg
+                class="w-5 h-4 shrink-0"
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-check"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M5 12l5 5l10 -10"></path>
+              </svg>Exclusive wallpapers crafted by renowned artists
+            </li>
+            <li class="inline-flex items-start gap-3 py-4">
+              <svg
+                class="w-5 h-4 shrink-0"
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-check"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M5 12l5 5l10 -10"></path>
+              </svg>
+              Pro-level templates for complex and advanced design projects
+            </li>
+            <li class="inline-flex items-start gap-3 py-4">
+              <svg
+                class="w-5 h-4 shrink-0"
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-check"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M5 12l5 5l10 -10"></path>
+              </svg>
+              Premium phone cases with personalized engravings and materials
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="px-8 py-12 mx-auto max-w-7xl md:px-12">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <div class="max-w-3xl">
+        <p class="text-3xl md:text-5xl tracking-tighter font-medium text-black">
+          FAQ
+        </p>
+        <p class="mt-4 text-lg text-gray-600 max-w-xl">
+          Frequent questons and answer
+        </p>
+      </div>
+      <div
+        x-data="{
+            activeAccordion: '',
+            setActiveAccordion(id) {
+                this.activeAccordion = (this.activeAccordion == id) ? '' : id
+            }
+        }"
+        class="relative w-full max-w-3xl gap-y-2 grid mx-auto text-sm font-normal lg:col-span-2">
+        <div
+          x-data="{ id: $id('accordion') }"
+          :class="{ 'text-neutral-900': activeAccordion==id, 'text-black   hover:text-neutral-500': activeAccordion!=id }"
+          class="cursor-pointer group border p-4 rounded-lg bg-gray-50">
+          <button
+            @click="setActiveAccordion(id)"
+            class="flex items-center justify-between w-full pb-1 text-left select-none">
+            <span class="text-base font-semibold">
+              Can I customize the wallpapers in the bundles?</span
+            >
+            <svg
+              class="w-5 h-5 duration-300 ease-out"
+              :class="{ '-rotate-[45deg]': activeAccordion==id }"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6v12m6-6H6"></path></svg
+            >
+          </button>
+          <div x-show="activeAccordion==id" x-collapse x-cloak>
+            <div class="pt-2 text-gray-600">
+              Yes, our Pro and Premium Bundles offer the option to customize
+              wallpapers by choosing from a range of colors, patterns, and
+              designs.
+            </div>
+          </div>
+        </div>
+        <div
+          x-data="{ id: $id('accordion') }"
+          :class="{ 'text-neutral-900': activeAccordion==id, 'text-black   hover:text-neutral-500': activeAccordion!=id }"
+          class="cursor-pointer group border p-4 rounded-lg bg-gray-50">
+          <button
+            @click="setActiveAccordion(id)"
+            class="flex items-center justify-between w-full pb-1 text-left select-none">
+            <span class="text-base font-semibold"
+              >Can I mix and match phone case designs in the bundles?</span
+            >
+            <svg
+              class="w-5 h-5 duration-300 ease-out"
+              :class="{ '-rotate-[45deg]': activeAccordion==id }"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6v12m6-6H6"></path></svg
+            >
+          </button>
+          <div x-show="activeAccordion==id" x-collapse x-cloak>
+            <div class="pt-2 text-gray-600">
+              Yes, our bundles allow you to select different phone case designs
+              from our collection. Mix and match to suit your style!
+            </div>
+          </div>
+        </div>
+        <div
+          x-data="{ id: $id('accordion') }"
+          :class="{ 'text-neutral-900': activeAccordion==id, 'text-black   hover:text-neutral-500': activeAccordion!=id }"
+          class="cursor-pointer group border p-4 rounded-lg bg-gray-50">
+          <button
+            @click="setActiveAccordion(id)"
+            class="flex items-center justify-between w-full pb-1 text-left select-none">
+            <span class="text-base font-semibold"
+              >Are the templates in the bundles compatible with popular design
+              software?</span
+            >
+            <svg
+              class="w-5 h-5 duration-300 ease-out"
+              :class="{ '-rotate-[45deg]': activeAccordion==id }"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6v12m6-6H6"></path></svg
+            >
+          </button>
+          <div x-show="activeAccordion==id" x-collapse x-cloak>
+            <div class="pt-2 text-gray-600">
+              Absolutely! Our templates are compatible with industry-standard
+              design software such as Adobe Photoshop, Illustrator, and Canva.
+            </div>
+          </div>
+        </div>
+        <div
+          x-data="{ id: $id('accordion') }"
+          :class="{ 'text-neutral-900': activeAccordion==id, 'text-black   hover:text-neutral-500': activeAccordion!=id }"
+          class="cursor-pointer group border p-4 rounded-lg bg-gray-50">
+          <button
+            @click="setActiveAccordion(id)"
+            class="flex items-center justify-between w-full pb-1 text-left select-none">
+            <span class="text-base font-semibold"
+              >Can I use the templates for commercial projects?</span
+            >
+            <svg
+              class="w-5 h-5 duration-300 ease-out"
+              :class="{ '-rotate-[45deg]': activeAccordion==id }"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6v12m6-6H6"></path></svg
+            >
+          </button>
+          <div x-show="activeAccordion==id" x-collapse x-cloak>
+            <div class="pt-2 text-gray-600">
+              Yes, all our templates are licensed for commercial use. Feel free
+              to utilize them for your professional projects and client work.
+            </div>
+          </div>
+        </div>
+        <div
+          x-data="{ id: $id('accordion') }"
+          :class="{ 'text-neutral-900': activeAccordion==id, 'text-black   hover:text-neutral-500': activeAccordion!=id }"
+          class="cursor-pointer group border p-4 rounded-lg bg-gray-50">
+          <button
+            @click="setActiveAccordion(id)"
+            class="flex items-center justify-between w-full pb-1 text-left select-none">
+            <span class="text-base font-semibold"
+              >Is there a limit to the number of wallpapers I can download with
+              the bundles?</span
+            >
+            <svg
+              class="w-5 h-5 duration-300 ease-out"
+              :class="{ '-rotate-[45deg]': activeAccordion==id }"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6v12m6-6H6"></path></svg
+            >
+          </button>
+          <div x-show="activeAccordion==id" x-collapse x-cloak>
+            <div class="pt-2 text-gray-600">
+              No, there's no limit! With our bundles, you have unlimited access
+              to our entire wallpaper collection, so you can download as many as
+              you like.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

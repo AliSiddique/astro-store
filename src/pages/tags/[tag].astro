@@ -1,8 +1,8 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import BlogPost from "../../components/BlogPost.astro";
+import EntriesOne from "@/components/entries/EntriesOne.astro";
+import Newsletter from "@/components/cta/Newsletter.astro";
 import { getCollection } from "astro:content";
-
 export async function getStaticPaths() {
   const allPosts = await getCollection("posts");
   const uniqueTags = [
@@ -26,28 +26,47 @@ const { posts } = Astro.props;
 
 <BaseLayout pageTitle={tag}>
   <section>
-    <div class="px-8 mx-auto max-w-7xl lg:px-24 py-12 lg:py-32">
-      <p>Posts tagged with {tag}</p>
-      <ol role="list" class="mt-16 space-y-10 sm:space-y-16">
-        <li>
-          <ol
-            role="list"
-            class="mt-8 divide-y divide-slate-300/30 rounded-2xl bg-slate-50 py-3 px-6 text-base tracking-tight sm:py-7 sm:px-8">
-            {
-              posts.map((post) => (
-                <li
-                  class="flex justify-between py-3"
-                  aria-label="Strokes and fills on page 21">
-                  <BlogPost
-                    url={"/posts/" + post.slug}
-                    title={post.data.title}
-                  />
-                </li>
-              ))
-            }
-          </ol>
-        </li>
-      </ol>
+    <div
+      class="items-center px-8 pb-12 mx-auto max-w-7xl md:px-12 lg:pb-24 pt-36">
+      <div class="grid grid-cols-1 lg:grid-cols-3 items-end gap-12">
+        <div class="max-w-3xl lg:col-span-2">
+          <p
+            class="text-3xl md:text-5xl tracking-tighter font-medium text-black">
+            All posts tagged with {tag}
+          </p>
+          <p class="mt-4 text-lg text-gray-600">
+            Stay ahead of the tech curve with the latest news, reviews, and
+            resources
+          </p>
+        </div>
+        <div class="max-w-sm ml-auto">
+          <a
+            href="/blog/blog-one"
+            class="items-center text-sm active:bg-gray-100 active:text-gray-900/60 active:transition-none border font-medium gap-2 inline-flex justify-center outline-offset-2 px-6 py-3 transition w-full bg-white hover:bg-gray-50 text-black lg:w-auto rounded-lg"
+            >Read all blog posts
+          </a>
+        </div>
+      </div>
     </div>
   </section>
+  <section>
+    <div class="px-8 py-12 mx-auto max-w-7xl md:px-12">
+      <ul class="grid grid-cols-1 sm:grid-cols-3 gap-x-3 gap-y-24 lg:gap-x-6">
+        {
+          posts.map((post) => (
+            <EntriesOne
+              url={"/posts/" + post.slug}
+              title={post.data.title}
+              description={post.data.description}
+              alt={post.data.title}
+              pubDate={post.data.pubDate.toString().slice(0, 10)}
+              author={post.data.author}
+              image={post.data.image.url}
+            />
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+  <Newsletter />
 </BaseLayout>
