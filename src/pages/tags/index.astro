@@ -8,25 +8,29 @@ const pageTitle = "Tag Index";
 
 <BaseLayout pageTitle={pageTitle}>
   <section>
-    <div class="px-8 mx-auto max-w-7xl lg:px-24">
-      <ol role="list" class="mt-16 space-y-10 sm:space-y-16">
-        <li>
-          <ol
-            role="list"
-            class="mt-8 divide-y divide-gray-300/30 rounded-2xl bg-gray-50 py-3 px-6 text-base tracking-tight sm:py-7 sm:px-8">
-            {
-              tags.map((tag) => (
-                <li
-                  class="flex justify-between py-3"
-                  aria-label="Strokes and fills on page 21">
-                  <span class="font-medium text-gray-900">
-                    <a href={`/tags/${tag}`}>{tag}</a>
-                  </span>
-                </li>
-              ))
-            }
-          </ol>
-        </li>
+    <div
+      class="items-center px-8 pb-12 mx-auto max-w-7xl md:px-12 lg:pb-24 pt-36">
+      <div class="max-w-3xl lg:col-span-2">
+        <p class="text-3xl md:text-5xl tracking-tighter font-medium text-black">
+          All tags
+        </p>
+        <p class="mt-4 text-lg text-gray-600">
+          Stay ahead of the tech curve with the latest news, reviews, and
+          resources
+        </p>
+      </div>
+      <ol role="list" class="mt-12 lg:mt-24 flex flex-wrap gap-3">
+        {
+          tags.map((tag) => (
+            <li>
+              <a
+                class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10"
+                href={`/tags/${tag}`}>
+                {tag}
+              </a>
+            </li>
+          ))
+        }
       </ol>
     </div>
   </section>
