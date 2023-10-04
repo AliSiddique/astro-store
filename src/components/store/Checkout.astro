@@ -1,0 +1,283 @@
+<section>
+  <div
+    class="items-center px-8 pb-12 mx-auto max-w-7xl md:px-12 lg:pb-24 pt-36"
+  >
+    <div
+      class="lg:gap-x-8 lg:gap-y-10 lg:grid lg:grid-cols-7 lg:grid-rows-1 xl:gap-x-12"
+    >
+      <div
+        class="mx-auto lg:col-span-3 "
+      >
+        <form class="bg-gray-50 border p-8 lg:p-10 rounded-xl h-full">
+          <button
+            type="button"
+            class="items-center text-sm active:bg-gray-100 active:text-gray-500/60 active:transition-none border font-medium gap-2 inline-flex justify-between outline-offset-2 px-6 py-3 transition w-full rounded-lg bg-black border-white/20 hover:bg-gray-600 text-white"
+          >
+            <span>Pay with Apple Pay</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-brand-apple"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                fill="white"
+                d="M9 7c-3 0 -4 3 -4 5.5c0 3 2 7.5 4 7.5c1.088 -.046 1.679 -.5 3 -.5c1.312 0 1.5 .5 3 .5s4 -3 4 -5c-.028 -.01 -2.472 -.403 -2.5 -3c-.019 -2.17 2.416 -2.954 2.5 -3c-1.023 -1.492 -2.951 -1.963 -3.5 -2c-1.433 -.111 -2.83 1 -3.5 1c-.68 0 -1.9 -1 -3 -1z"
+              ></path>
+              <path d="M12 4a2 2 0 0 0 2 -2a2 2 0 0 0 -2 2"></path>
+            </svg>
+          </button>
+          <div class="relative mt-2">
+            <div class="absolute inset-0 flex items-center" aria-hidden="true">
+              <div class="w-full border-t border-gray-200"></div>
+            </div>
+            <div class="relative flex justify-center">
+              <span class="bg-gray-50 px-4 text-sm font-medium text-gray-500"
+                >or</span
+              >
+            </div>
+          </div>
+          <div class="grid grid-cols-12 gap-x-4 gap-y-2 mt-2">
+            <div class="col-span-full">
+              <label for="email-address" class="sr-only">Email address</label>
+              <div class="mt-1">
+                <input
+                  placeholder="Email adress"
+                  type="email"
+                  id="email-address"
+                  name="email-address"
+                  autocomplete="email"
+                  class="flex-auto w-full rounded-lg border-0 bg-white px-3.5 py-3 text-black focus:ring-inset focus:ring-black focus:ring-2 sm:text-sm sm:leading-6 placeholder:text-gray-600"
+                />
+              </div>
+            </div>
+            <div class="col-span-full">
+              <label for="name-on-card" class="sr-only">Name on card</label>
+              <div class="mt-1">
+                <input
+                  placeholder="Name on card"
+                  type="text"
+                  id="name-on-card"
+                  name="name-on-card"
+                  autocomplete="cc-name"
+                  class="flex-auto w-full rounded-lg border-0 bg-white px-3.5 py-3 text-black focus:ring-inset focus:ring-black focus:ring-2 sm:text-sm sm:leading-6 placeholder:text-gray-600"
+                />
+              </div>
+            </div>
+            <div class="col-span-full">
+              <label for="card-number" class="sr-only">Card number</label>
+              <div class="mt-1">
+                <input
+                  placeholder="Card number"
+                  type="text"
+                  id="card-number"
+                  name="card-number"
+                  autocomplete="cc-number"
+                  class="flex-auto w-full rounded-lg border-0 bg-white px-3.5 py-3 text-black focus:ring-inset focus:ring-black focus:ring-2 sm:text-sm sm:leading-6 placeholder:text-gray-600"
+                />
+              </div>
+            </div>
+            <div class="col-span-8 sm:col-span-9">
+              <label for="expiration-date" class="sr-only"
+                >Expiration date (MM/YY)</label
+              >
+              <div class="mt-1">
+                <input
+                  placeholder="Expiration date (MM/YY)"
+                  type="text"
+                  name="expiration-date"
+                  id="expiration-date"
+                  autocomplete="cc-exp"
+                  class="flex-auto w-full rounded-lg border-0 bg-white px-3.5 py-3 text-black focus:ring-inset focus:ring-black focus:ring-2 sm:text-sm sm:leading-6 placeholder:text-gray-600"
+                />
+              </div>
+            </div>
+            <div class="col-span-4 sm:col-span-3">
+              <label for="cvc" class="sr-only">CVC</label>
+              <div class="mt-1">
+                <input
+                  placeholder="CVC"
+                  type="text"
+                  name="cvc"
+                  id="cvc"
+                  autocomplete="csc"
+                  class="flex-auto w-full rounded-lg border-0 bg-white px-3.5 py-3 text-black focus:ring-inset focus:ring-black focus:ring-2 sm:text-sm sm:leading-6 placeholder:text-gray-600"
+                />
+              </div>
+            </div>
+            <div class="col-span-full">
+              <label for="address" class="sr-only">Address</label>
+              <div class="mt-1">
+                <input
+                  placeholder="Adress"
+                  type="text"
+                  id="address"
+                  name="address"
+                  autocomplete="street-address"
+                  class="flex-auto w-full rounded-lg border-0 bg-white px-3.5 py-3 text-black focus:ring-inset focus:ring-black focus:ring-2 sm:text-sm sm:leading-6 placeholder:text-gray-600"
+                />
+              </div>
+            </div>
+            <div class="col-span-full sm:col-span-4">
+              <label for="city" class="sr-only">City</label>
+              <div class="mt-1">
+                <input
+                  placeholder="City"
+                  type="text"
+                  id="city"
+                  name="city"
+                  autocomplete="address-level2"
+                  class="flex-auto w-full rounded-lg border-0 bg-white px-3.5 py-3 text-black focus:ring-inset focus:ring-black focus:ring-2 sm:text-sm sm:leading-6 placeholder:text-gray-600"
+                />
+              </div>
+            </div>
+            <div class="col-span-full sm:col-span-4">
+              <label for="region" class="sr-only">State / Province</label>
+              <div class="mt-1">
+                <input
+                  placeholder="State"
+                  type="text"
+                  id="region"
+                  name="region"
+                  autocomplete="address-level1"
+                  class="flex-auto w-full rounded-lg border-0 bg-white px-3.5 py-3 text-black focus:ring-inset focus:ring-black focus:ring-2 sm:text-sm sm:leading-6 placeholder:text-gray-600"
+                />
+              </div>
+            </div>
+            <div class="col-span-full sm:col-span-4">
+              <label for="postal-code" class="sr-only">Postal code</label>
+              <div class="mt-1">
+                <input
+                  placeholder="Postal Code"
+                  type="text"
+                  id="postal-code"
+                  name="postal-code"
+                  autocomplete="postal-code"
+                  class="flex-auto w-full rounded-lg border-0 bg-white px-3.5 py-3 text-black focus:ring-inset focus:ring-black focus:ring-2 sm:text-sm sm:leading-6 placeholder:text-gray-600"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-span-full mt-2 sm:col-span-4">
+            <label for="discount-code" class="sr-only">Discount code</label>
+            <div class="mt-1 flex w-full space-x-2">
+              <input
+                type="text"
+                id="discount-code"
+                name="discount-code"
+                placeholder="Discount Code"
+                class="flex-auto w-full rounded-lg border-0 bg-white px-3.5 py-3 text-black focus:ring-inset focus:ring-black focus:ring-2 sm:text-sm sm:leading-6 placeholder:text-gray-600"
+              />
+              <button
+                type="submit"
+                class="items-center text-sm group active:bg-gray-100 active:text-gray-500/60 active:transition-none border font-medium gap-2 inline-flex justify-center outline-offset-2 px-6 py-3 transition w-full bg-white hover:bg-gray-50 text-black rounded-lg"
+                >Apply</button
+              >
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            class="mt-4 items-center text-sm active:bg-gray-100 active:text-gray-500/60 active:transition-none border font-medium gap-2 inline-flex justify-between outline-offset-2 px-6 py-3 transition w-full rounded-lg bg-black border-white/20 hover:bg-gray-600 text-white"
+            >Pay <span>$00.00</span></button
+          >
+        </form>
+      </div>
+      <div
+        class="lg:col-span-4 mt-12 lg:mt-0 space-y-2 "
+      >
+        <ul
+          role="list"
+          class="flex-col flex  gap-2 "
+        >
+          <li class="flex space-x-6 bg-gray-50 border p-8 lg:p-10 rounded-xl">
+            <img
+              src="https://images.unsplash.com/photo-1510878933023-e2e2e3942fb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80"
+              alt="#_"
+              class="h-40 w-40 flex-none rounded-lg bg-gray-200 object-cover object-center"
+            />
+            <div class="flex flex-col justify-between space-y-4 w-full">
+              <div class="space-y-1 text-sm font-medium">
+                <h3 class="text-base font-semibold text-black">iPhone 45</h3>
+                <p class="text-gray-500">$799.00</p>
+                <p class="text-gray-500">iPhone 45</p>
+                <p class="text-gray-500">20G</p>
+              </div>
+              <div class="flex ml-auto">
+                <button
+                  type="button"
+                  class="text-sm font-medium text-gray-600 hover:text-gray-500"
+                  >Remove</button
+                >
+              </div>
+            </div>
+          </li>
+          <li class="flex space-x-6 bg-gray-50 border p-8 lg:p-10 rounded-xl">
+            <img
+              src="https://images.unsplash.com/photo-1550029402-226115b7c579?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1065&q=80"
+              alt="#_"
+              class="h-40 w-40 flex-none rounded-lg bg-gray-200 object-cover object-center"
+            />
+            <div class="flex flex-col justify-between space-y-4 w-full">
+              <div class="space-y-1 text-sm font-medium">
+                <h3 class="text-base font-semibold text-black">Apple</h3>
+                <p class="text-gray-500">$590.00</p>
+                <p class="text-gray-500">iPhone 45</p>
+                <p class="text-gray-500">20G</p>
+              </div>
+              <div class="flex ml-auto">
+                <button
+                  type="button"
+                  class="text-sm font-medium text-gray-600 hover:text-gray-500"
+                  >Remove</button
+                >
+              </div>
+            </div>
+          </li>
+
+          <!-- More products... -->
+        </ul>
+
+        <div class="flex-none  pt-2">
+          <dl class="space-y-6 text-sm font-medium text-gray-500">
+            <div class="flex justify-between">
+              <dt class="text-base font-semibold text-black">Subtotal</dt>
+              <dd class="text-gray-500">$920.00</dd>
+            </div>
+            <div class="flex justify-between">
+              <dt class="flex">
+                <span class="text-base font-semibold text-black">Discount</span>
+                <span
+                  class="ml-2 rounded-md bg-gray-900 px-2 py-0.5 inline-flex items-center text-xs tracking-wide text-white uppercase"
+                  >LEXINGTON30</span
+                >
+              </dt>
+              <dd class="text-gray-500">-$30.00</dd>
+            </div>
+            <div class="flex justify-between">
+              <dt class="text-base font-semibold text-black">Taxes</dt>
+              <dd class="text-gray-500">$403.68</dd>
+            </div>
+            <div class="flex justify-between">
+              <dt class="text-base font-semibold text-black">Shipping</dt>
+              <dd class="text-gray-500">Free</dd>
+            </div>
+            <div
+              class="flex items-center justify-between border-t border-gray-200 pt-6 text-gray-500"
+            >
+              <dt class="text-base">Total</dt>
+              <dd class="text-base">$3.019</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
