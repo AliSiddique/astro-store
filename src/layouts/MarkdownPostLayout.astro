@@ -1,49 +1,34 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-import SidebarEntries from "@/components/entries/SidebarEntries.astro";
 import LatestEntries from "@/components/entries/LatestEntries.astro";
 import Newsletter from "@/components/cta/Newsletter.astro";
 import { getCollection } from "astro:content";
 const allPosts = await getCollection("posts");
 const { frontmatter } = Astro.props;
-import { AstroSeo } from "@astrolib/seo";
 ---
-
-<AstroSeo
-  title={frontmatter.title}
-  description={frontmatter.description}
-  canonical="https://www.lexingtonthemes.com"
-  openGraph={{
-    url: "https://www.lexingtonthemes.com",
-    title: "Title}",
-    description: "{frontmatter.description}",
-    images: [
-      {
-        url: "https://www.lexingtonthemes.com/opengraph/social-og.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Social open graph",
-        type: "image/jpeg",
-      },
-      {
-        url: "https://www.lexingtonthemes.com/opengraph/twitter-og.jpg",
-        width: 4096,
-        height: 4096,
-        alt: "Twitter open graph",
-        type: "image/jpeg",
-      },
-      { url: "https://www.lexingtonthemes.com/opengraph/social-og.jpg" },
-      { url: "https://www.lexingtonthemes.com/opengraph/twitter-og.jpg" },
-    ],
-    site_name: "YourSitesName",
-  }}
-  twitter={{
-    handle: "@TwitterHandle",
-    site: "@site",
-    cardType: "summary_large_image",
-  }}
-/>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const headings = document.querySelectorAll(".prose-styles h2,.prose-styles  h3");
+    const tocContainer = document.getElementById("table-of-contents");
+    if (tocContainer && headings.length > 0) {
+      const tocList = document.createElement("ul");
+      tocList.classList.add("space-y-3", "text-xs");
+      headings.forEach((heading) => {
+        const listItem = document.createElement("li");
+        const link = document.createElement("a");
+        link.textContent = heading.textContent;
+        link.href = `#${heading.id}`;
+        link.classList.add("text-gray-600", "uppercase", "hover:text-black","font-medium");
+        listItem.appendChild(link);
+        tocList.appendChild(listItem);
+      });
+      tocContainer.appendChild(tocList);
+      tocContainer.classList.remove("hidden");
+    }
+  });
+</script>
 <BaseLayout>
+
   <section>
     <div
       class="items-center px-8 pb-12 mx-auto max-w-7xl md:px-12 lg:pb-24 pt-36">
@@ -77,24 +62,13 @@ import { AstroSeo } from "@astrolib/seo";
     <div class="px-8 py-12 mx-auto max-w-7xl md:px-12">
       <div class="grid grid-cols-1 lg:grid-cols-4 gap-12">
         <div>
-          <p class="text-base font-semibold text-black">Other entries</p>
-          <ul class="flex flex-col w-full mt-12">
-            <li>
-              {
-                allPosts.map((post) => (
-                  <>
-                    <SidebarEntries
-                      url={"/posts/" + post.slug}
-                      title={post.data.title}
-                    />
-                  </>
-                ))
-              }
-            </li>
-          </ul>
+          <div id="table-of-contents" class="hidden lg:block lg:sticky lg:top-64 space-y-12">
+            <p class="text-base font-semibold text-black uppercase">Other entries</p>
+            <!-- Your table of contents content here -->
+          </div>
         </div>
         <div
-          class="mx-auto order-first lg:order-last lg:col-span-3 hover:prose-a:text-black prose prose-a:text-accent-500 prose-blockquote:border-l-black prose-blockquote:text-gray-600 prose-code:text-black prose-headings:font-bold prose-headings:text-black prose-headings:tracking-tighter prose-li:marker:text-accent-500 text-gray-600 prose-pre:rounded-xl prose-pre:p-4">
+          class="mx-auto order-first lg:order-last lg:col-span-3 prose-styles ">
           <slot />
         </div>
       </div>
